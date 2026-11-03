@@ -8,7 +8,7 @@ const TodoForm = ({ setTodos }) => {
     e.preventDefault()
     if (!task.trim()) return
 
-    setTodos(prev => [{ task: task, id: crypto.randomUUID(), status: false }, ...prev])
+    setTodos(prev => [{ task: task, id: Date.now(), status: false }, ...prev])
     setTask("")
   }
 
